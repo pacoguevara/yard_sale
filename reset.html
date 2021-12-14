@@ -49,6 +49,20 @@
         display: none;
       }
 
+      .title {
+        font-size: var(--lg);
+        margin-bottom: 12px;
+        text-align: center;
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .subtitle {
+        color: var(--very-light-pink);
+        font-size: var(--md);
+        font-weight: 300;
+      }
+
       .label {
         font-size: var(--sm);
         font-weight: bold;
@@ -65,21 +79,9 @@
         margin-bottom: 12px;
       }
 
-      .input-email {
-        margin-bottom: 22px;
-      }
-
       .form {
         display: flex;
         flex-direction: column;
-      }
-
-      .form a {
-        color: var(--hospital-green);
-        font-size: var(--sm);
-        text-decoration: none;
-        text-align: center;
-        margin-bottom: 52px;
       }
 
       .primary-button {
@@ -87,18 +89,6 @@
         border-radius: 8px;
         border: none;
         color: var(--white);
-        width: 100%;
-        cursor: pointer;
-        font-size: var(--md);
-        font-weight: bold;
-        height: 50px;
-      }
-
-      .secondary-button {
-        background-color: var(--white);
-        border-radius: 8px;
-        border: 1px solid var(--hospital-green);
-        color: var(--hospital-green);
         width: 100%;
         cursor: pointer;
         font-size: var(--md);
@@ -115,12 +105,6 @@
         .logo {
           display: block;
         }
-
-        .secondary-button {
-          position: absolute;
-          bottom: 24px;
-          width: inherit;
-        }
       }
     </style>
   </head>
@@ -133,17 +117,10 @@
           srcset=""
           class="logo"
         />
-
+        <h1 class="title">Create a new password</h1>
+        <p class="subtitle">Enter a new password for your account</p>
         <form action="/" class="form">
-          <label for="email" class="label">Email address</label>
-          <input
-            type="email"
-            name=""
-            id="email"
-            placeholder="a@example.com"
-            class="input input-email"
-          />
-          <label for="new-password" class="label">Password</label>
+          <label for="password" class="label">Password</label>
           <input
             type="password"
             name=""
@@ -151,15 +128,20 @@
             placeholder="******"
             class="input input-password"
           />
+          <label for="new-password" class="label">New password</label>
+          <input
+            type="password"
+            name=""
+            id="new-password"
+            placeholder="******"
+            class="input input-password"
+          />
           <input
             type="submit"
-            value="Login"
+            value="Confirm"
             class="primary-button login-button"
           />
-
-          <a href="/">Forgot my password</a>
         </form>
-        <button class="secondary-button signup-button">Sign up</button>
       </div>
     </div>
   </body>
